@@ -3,10 +3,10 @@
 
 name = input('Please, enter your name:')
 age = input('Please, enter your age:')
-to_100 = 100 - int(age)
+to_100 = 2019 + 100 - int(age)
 
-print('Hey, {}. You will be 100 years old after {} years.'.format(name, to_100))
+print('Hey, {}. You will be 100 years old in {}.'.format(name, to_100))
 
 times = int(input('Please, enter how many times do yo want to see the text above:'))
 
-print(times * 'Hey, {}. You will be 100 years old after {} years.\n'.format(name, to_100))
+print(times * 'Hey, {}. You will be 100 years old in {}.'.format(name, to_100))

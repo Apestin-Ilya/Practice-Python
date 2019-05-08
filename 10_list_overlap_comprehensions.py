@@ -18,15 +18,26 @@ b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 ab = []
 ab = [j for j in b for i in a if j == i and j not in ab]
 
-print(a)
-print(b)
-print(ab)
+print('a=', a)
+print('b=', b)
+print('ab=', ab)
 
 x = [random.randint(1, 10) for i in range(10)]
 y = [random.randint(1, 10) for i in range(20)]
-print(x)
-print(y)
+print('x=', x)
+print('y=', y)
 
 xy = []
 xy = [j for j in y for i in x if j == i and j not in xy]
-print(xy)
+print('xy=', xy)
+
+'''
+Output
+
+a= [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b= [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+ab= [1, 1, 2, 3, 5, 8, 13]
+x= [2, 6, 3, 6, 4, 6, 9, 5, 1, 5]
+y= [6, 6, 8, 3, 9, 5, 1, 3, 6, 2, 3, 3, 10, 8, 4, 4, 5, 2, 3, 10]
+xy [6, 6, 6, 6, 6, 6, 3, 9, 5, 5, 1, 3, 6, 6, 6, 2, 3, 3, 4, 4, 5, 5, 2, 3]
+'''

@@ -29,7 +29,7 @@ print('y=', y)
 
 xy = []
 xy = list(set([j for j in y for i in x if j == i]))
-xy_2 = list(set(x + y))
+xy_2 = list(set(x).intersection(set(y)))
 print('xy=', xy)
 print('xy_2=', xy)
 

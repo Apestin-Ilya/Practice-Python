@@ -1,0 +1,49 @@
+# 13 Fibonacci
+'''
+Write a program that asks the user how many Fibonnaci numbers to
+generate and then generates them. Take this opportunity to think
+about how you can use functions. Make sure to ask the user to enter
+the number of numbers in the sequence to generate.
+'''
+# http://www.practicepython.org/exercise/2014/04/30/13-fibonacci.html
+
+
+def fibo(n):
+    fibo = []
+    for i in range(1, n + 1):
+        if i == 0:
+            continue
+        elif i == 1 or i == 2:
+            fibo.append(1)
+        else :
+            next_el = fibo[-2] + fibo[-1]
+            fibo.append(next_el)
+    return fibo
+
+
+def ask_number(text='Enter some number: '):
+    number = int(input(text))
+    return number
+
+   
+print(fibo(ask_number('How many Fibonacci numbers do you want to see? ')))
+
+
+'''
+Output
+
+How many Fibonacci numbers do you want to see? 0
+[]
+>>>
+How many Fibonacci numbers do you want to see? 1
+[1]
+>>> 
+How many Fibonacci numbers do you want to see? 2
+[1, 1]
+>>> 
+How many Fibonacci numbers do you want to see? 3
+[1, 1, 2]
+>>> 
+How many Fibonacci numbers do you want to see? 7
+[1, 1, 2, 3, 5, 8, 13]
+'''

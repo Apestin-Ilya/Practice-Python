@@ -53,5 +53,19 @@ def list_with_common_elements(list_1, list_2):
     new_list = list(set(list_1).intersection(set(list_2)))
     return new_list
 
-print(list_with_common_elements(a, b))
-print(list_with_common_elements(rand_list_1, rand_list_2))
+print('using function, c - ', list_with_common_elements(a, b))
+print('using function, extra - ', list_with_common_elements(rand_list_1, rand_list_2))
+
+'''
+Output
+
+a -  [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b -  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+c -  [1, 2, 3, 5, 8, 13]
+rand_list_1 -  [3, 10, 5, 5, 3, 5, 2, 11, 3, 9, 8, 11, 4, 4, 8]
+rand_list_2 -  [3, 3, 9, 1, 9, 1, 2, 6, 4, 6, 5, 7, 3, 2, 11, 8, 6, 10]
+extra_1 -  [3, 10, 5, 2, 11, 9, 8, 4]
+extra_2 -  [2, 3, 4, 5, 8, 9, 10, 11]
+using function, c -  [1, 2, 3, 5, 8, 13]
+using function, extra -  [2, 3, 4, 5, 8, 9, 10, 11]
+'''

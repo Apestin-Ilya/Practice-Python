@@ -22,25 +22,36 @@ for i in a:
     for j in b:
         if j == i and j not in c:
             c.append(j)
+
+print('a - ', a)
+print('b - ', b)
 print('c - ', c)
 
 ### Extra 1
 
-a = [random.randint(1,11) for i in range(random.randint(10,21))]
-b = [random.randint(1,11) for i in range(random.randint(10,21))]
+rand_list_1 = [random.randint(1,11) for i in range(random.randint(10,21))]
+rand_list_2 = [random.randint(1,11) for i in range(random.randint(10,21))]
 
-print('a - ', a)
-print('b - ', b)
+print('rand_list_1 - ', rand_list_1)
+print('rand_list_2 - ', rand_list_2)
 
 extra_1 = []
-for i in a:
-    for j in b:
+for i in rand_list_1:
+    for j in rand_list_2:
         if j == i and j not in extra_1:
             extra_1.append(j)
 print('extra_1 - ', extra_1)
 
 ### Extra 2
 
-#extra_2 = []
-#extra_2 = [j for i in a for j in b if j == i and j not in extra_2]
-#print('extra_2 - ', extra_2)
+extra_2 = list(set(rand_list_1).intersection(set(rand_list_2)))
+print('extra_2 - ', extra_2)
+
+### Flashback from Excercise 14
+
+def list_with_common_elements(list_1, list_2):
+    new_list = list(set(list_1).intersection(set(list_2)))
+    return new_list
+
+print(list_with_common_elements(a, b))
+print(list_with_common_elements(rand_list_1, rand_list_2))
